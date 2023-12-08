@@ -7,7 +7,6 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
   const navigation = useNavigation();
 
   const submitForm = async () => {
@@ -16,12 +15,12 @@ const Signup = () => {
       email,
       password,
       confirmPassword,
-      phone,
-      gender
+      // phone,
+      // gender
     };
 
     try {
-      const response = await fetch('http://10.0.2.2:3000/User/Signup', {
+      const response = await fetch('http://192.168.0.102:3000/User/Signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
