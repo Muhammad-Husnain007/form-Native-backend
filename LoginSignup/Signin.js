@@ -15,7 +15,7 @@ const Signin = () => {
     setEmail("");
     setPassword("");
     try {
-      const response = await fetch('http://localhost:3000/user/signin', {
+      const response = await fetch('http://192.168.0.102:3000/user/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ const Signin = () => {
       });
 
       if (response.ok) {
-        console.log('Form data sent successfully!');
+        console.log('login data sent successfully!');
         // Redirect to home page or desired screen upon successful sign-in
       } else {
         if (response.status === 401) {
